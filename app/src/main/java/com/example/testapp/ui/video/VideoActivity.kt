@@ -1,6 +1,7 @@
 package com.example.testapp.ui.video
 
-
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.testapp.R
@@ -13,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_video.*
 
 class VideoActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
+
 
     override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
         showShortToast("Youtube Api Initialization Success")
@@ -32,7 +34,18 @@ class VideoActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener
         yt_video1.initialize("AIzaSyBrFISewnoB1y9qtOvBOuXSGfdjruOmUJM", this)
         /*yt_video2.initialize("AIzaSyBrFISewnoB1y9qtOvBOuXSGfdjruOmUJM", this)
         yt_video3.initialize("AIzaSyBrFISewnoB1y9qtOvBOuXSGfdjruOmUJM", this)*/
-    }
 
+        btnYoutubeChannel.setOnClickListener {
+            val urlYoutube = "https://www.youtube.com/channel/UCjevcnwURum6weHrnkHul4Q"
+            val urlYoutubeInApp = "vnd.youtube.com/channel/UCjevcnwURum6weHrnkHul4Q"
+            try {
+                //here we try to open the link in app
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(urlYoutubeInApp)))
+            } catch (e: Exception) {
+                //the app isn't available: we open in browser`
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(urlYoutube)))
+            }
+        }
+    }
 
 }
