@@ -7,11 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.video.VideoActivity">
 
-    <TextView
-        android:text="This is Video"
-        android:layout_centerInParent="true"
+    <com.google.android.youtube.player.YouTubePlayerView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/yt_video1"/>
+
+   <!-- <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/yt_video2"/>
+
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:layout_width="wrap_content"
@@ -20,5 +33,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/yt_pv"/>
+        android:id="@+id/yt_video3"/>-->
 </RelativeLayout>
