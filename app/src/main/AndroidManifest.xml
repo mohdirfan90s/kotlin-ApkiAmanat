@@ -23,4 +23,7 @@
         </activity>
     </application>
 
+    <!--irfan youtube videos-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>
