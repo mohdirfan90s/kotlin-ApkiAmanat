@@ -1,37 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
     tools:context=".ui.home.home_fragment.HomeFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This is Home Fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivBookHOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/books" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivBookHOME"
+                android:layout_centerHorizontal="true"
+                android:text="@string/book"
+                android:textSize="@dimen/_19ssp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivVidoesHOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivVidoesHOME"
+                android:layout_centerHorizontal="true"
+                android:text="@string/videos"
+                android:textSize="@dimen/_19ssp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <ImageView
+                android:id="@+id/ivQuranHOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/quran" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivQuranHOME"
+                android:layout_centerHorizontal="true"
+                android:text="@string/quran"
+                android:textSize="@dimen/_19ssp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <ImageView
+                android:id="@+id/ivDuasHOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/dua" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivDuasHOME"
+                android:layout_centerHorizontal="true"
+                android:text="@string/duas"
+                android:textSize="@dimen/_19ssp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book"
         android:layout_marginTop="50dp"
-        />
+        android:text="Book"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Video"/>
+        android:text="Video"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnQuran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quran"
-        />
+        android:visibility="gone" />
 
 
 </LinearLayout>

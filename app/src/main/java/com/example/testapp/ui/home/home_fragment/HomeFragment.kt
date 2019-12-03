@@ -36,17 +36,17 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
         // TODO: Use the ViewModel
 
-        btnBook.setOnClickListener(){
+        ivBookHOME.setOnClickListener(){
             val intent = Intent(activity, BookListActivity::class.java)
             startActivity(intent)
         }
 
-        btnVideo.setOnClickListener(){
+        ivVidoesHOME.setOnClickListener(){
             val intent = Intent(activity, VideoActivity::class.java)
             startActivity(intent)
         }
 
-        btnQuran.setOnClickListener(){
+        ivQuranHOME.setOnClickListener(){
             val intent = Intent(activity, QuranActivity::class.java)
             startActivity(intent)
         }

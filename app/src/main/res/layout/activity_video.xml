@@ -23,26 +23,33 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/videoOneVA"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp" />
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:id="@+id/videoOneVA"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_150sdp" />-->
 
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/videoTwoVA"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        />
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:id="@+id/videoTwoVA"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_150sdp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        />-->
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/videoThreeVA"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        />
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:id="@+id/videoThreeVA"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_150sdp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        />-->
 
+
+    <fragment
+        android:id="@+id/youtubeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment">
+    </fragment>
 
     <Button
         android:id="@+id/btnMoreVideosVA"
