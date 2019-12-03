@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.example.testapp.R
 import com.example.testapp.ui.book.BookActivity
 import com.example.testapp.ui.book.BookListActivity
+import com.example.testapp.ui.dua.DuaActivity
 import com.example.testapp.ui.quran.QuranActivity
 import com.example.testapp.ui.video.VideoActivity
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -48,6 +49,11 @@ class HomeFragment : Fragment() {
 
         ivQuranHOME.setOnClickListener(){
             val intent = Intent(activity, QuranActivity::class.java)
+            startActivity(intent)
+        }
+
+        ivDuasHOME.setOnClickListener(){
+            val intent = Intent(activity, DuaActivity::class.java)
             startActivity(intent)
         }
     }
